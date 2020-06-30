@@ -9,8 +9,10 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var name = ""
+    
     var body: some View {
-        Text("Hello, World!")
+        TextField("Enter text", text: $name)
     }
 }
 

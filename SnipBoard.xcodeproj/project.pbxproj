@@ -15,6 +15,8 @@
 		967D114124A67256003A6F1C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 967D113F24A67256003A6F1C /* LaunchScreen.storyboard */; };
 		967D114C24A67256003A6F1C /* SnipBoardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967D114B24A67256003A6F1C /* SnipBoardTests.swift */; };
 		967D115724A67256003A6F1C /* SnipBoardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967D115624A67256003A6F1C /* SnipBoardUITests.swift */; };
+		967D116B24A672AF003A6F1C /* KeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967D116A24A672AF003A6F1C /* KeyboardViewController.swift */; };
+		967D116F24A672AF003A6F1C /* SnipBoardKeyboard.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 967D116824A672AF003A6F1C /* SnipBoardKeyboard.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,7 +34,28 @@
 			remoteGlobalIDString = 967D113024A67254003A6F1C;
 			remoteInfo = SnipBoard;
 		};
+		967D116D24A672AF003A6F1C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 967D112924A67254003A6F1C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 967D116724A672AF003A6F1C;
+			remoteInfo = SnipBoardKeyboard;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		967D117324A672AF003A6F1C /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				967D116F24A672AF003A6F1C /* SnipBoardKeyboard.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		967D113124A67254003A6F1C /* SnipBoard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnipBoard.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,6 +72,9 @@
 		967D115224A67256003A6F1C /* SnipBoardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SnipBoardUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		967D115624A67256003A6F1C /* SnipBoardUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnipBoardUITests.swift; sourceTree = "<group>"; };
 		967D115824A67256003A6F1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		967D116824A672AF003A6F1C /* SnipBoardKeyboard.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SnipBoardKeyboard.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		967D116A24A672AF003A6F1C /* KeyboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardViewController.swift; sourceTree = "<group>"; };
+		967D116C24A672AF003A6F1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +99,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		967D116524A672AF003A6F1C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -82,6 +115,7 @@
 				967D113324A67254003A6F1C /* SnipBoard */,
 				967D114A24A67256003A6F1C /* SnipBoardTests */,
 				967D115524A67256003A6F1C /* SnipBoardUITests */,
+				967D116924A672AF003A6F1C /* SnipBoardKeyboard */,
 				967D113224A67254003A6F1C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -92,6 +126,7 @@
 				967D113124A67254003A6F1C /* SnipBoard.app */,
 				967D114724A67256003A6F1C /* SnipBoardTests.xctest */,
 				967D115224A67256003A6F1C /* SnipBoardUITests.xctest */,
+				967D116824A672AF003A6F1C /* SnipBoardKeyboard.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -136,6 +171,15 @@
 			path = SnipBoardUITests;
 			sourceTree = "<group>";
 		};
+		967D116924A672AF003A6F1C /* SnipBoardKeyboard */ = {
+			isa = PBXGroup;
+			children = (
+				967D116A24A672AF003A6F1C /* KeyboardViewController.swift */,
+				967D116C24A672AF003A6F1C /* Info.plist */,
+			);
+			path = SnipBoardKeyboard;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -146,10 +190,12 @@
 				967D112D24A67254003A6F1C /* Sources */,
 				967D112E24A67254003A6F1C /* Frameworks */,
 				967D112F24A67254003A6F1C /* Resources */,
+				967D117324A672AF003A6F1C /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				967D116E24A672AF003A6F1C /* PBXTargetDependency */,
 			);
 			name = SnipBoard;
 			productName = SnipBoard;
@@ -192,6 +238,23 @@
 			productReference = 967D115224A67256003A6F1C /* SnipBoardUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		967D116724A672AF003A6F1C /* SnipBoardKeyboard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 967D117024A672AF003A6F1C /* Build configuration list for PBXNativeTarget "SnipBoardKeyboard" */;
+			buildPhases = (
+				967D116424A672AF003A6F1C /* Sources */,
+				967D116524A672AF003A6F1C /* Frameworks */,
+				967D116624A672AF003A6F1C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SnipBoardKeyboard;
+			productName = SnipBoardKeyboard;
+			productReference = 967D116824A672AF003A6F1C /* SnipBoardKeyboard.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -213,6 +276,9 @@
 						CreatedOnToolsVersion = 11.5;
 						TestTargetID = 967D113024A67254003A6F1C;
 					};
+					967D116724A672AF003A6F1C = {
+						CreatedOnToolsVersion = 11.5;
+					};
 				};
 			};
 			buildConfigurationList = 967D112C24A67254003A6F1C /* Build configuration list for PBXProject "SnipBoard" */;
@@ -231,6 +297,7 @@
 				967D113024A67254003A6F1C /* SnipBoard */,
 				967D114624A67256003A6F1C /* SnipBoardTests */,
 				967D115124A67256003A6F1C /* SnipBoardUITests */,
+				967D116724A672AF003A6F1C /* SnipBoardKeyboard */,
 			);
 		};
 /* End PBXProject section */
@@ -254,6 +321,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		967D115024A67256003A6F1C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		967D116624A672AF003A6F1C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -289,6 +363,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		967D116424A672AF003A6F1C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				967D116B24A672AF003A6F1C /* KeyboardViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -301,6 +383,11 @@
 			isa = PBXTargetDependency;
 			target = 967D113024A67254003A6F1C /* SnipBoard */;
 			targetProxy = 967D115324A67256003A6F1C /* PBXContainerItemProxy */;
+		};
+		967D116E24A672AF003A6F1C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 967D116724A672AF003A6F1C /* SnipBoardKeyboard */;
+			targetProxy = 967D116D24A672AF003A6F1C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -433,6 +520,7 @@
 		967D115C24A67256003A6F1C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"SnipBoard/Preview Content\"";
@@ -453,6 +541,7 @@
 		967D115D24A67256003A6F1C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"SnipBoard/Preview Content\"";
@@ -554,6 +643,44 @@
 			};
 			name = Release;
 		};
+		967D117124A672AF003A6F1C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 293J2QS9LF;
+				INFOPLIST_FILE = SnipBoardKeyboard/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = me.jasonmerino.SnipBoard.SnipBoard.SnipBoardKeyboard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		967D117224A672AF003A6F1C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 293J2QS9LF;
+				INFOPLIST_FILE = SnipBoardKeyboard/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = me.jasonmerino.SnipBoard.SnipBoard.SnipBoardKeyboard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -589,6 +716,15 @@
 			buildConfigurations = (
 				967D116224A67256003A6F1C /* Debug */,
 				967D116324A67256003A6F1C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		967D117024A672AF003A6F1C /* Build configuration list for PBXNativeTarget "SnipBoardKeyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				967D117124A672AF003A6F1C /* Debug */,
+				967D117224A672AF003A6F1C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
